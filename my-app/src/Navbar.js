@@ -7,9 +7,9 @@ export default function Navbar() {
 
     }
   return (
-    <div className=" p-4 h-[4.5rem] bg-blue-950 text-white flex justify-around items-center  ">
-      <div className="name lg:text-2xl text-lg" style={{fontFamily:"sans-serif"}}>
-        Vishal's Portfolio
+    <div className=" p-3 h-[4rem]  sticky top-0 bg-[#1a1a1a] flex lg:justify-around justify-between items-center border-b-[0.5px] border-[#ffeb3b] rounded  ">
+      <div className="name lg:text-2xl text-xl text-white font-bold" style={{fontFamily:"sans-serif"}}>
+        Vishal Sharma
       </div>
       <div className={`right-part hidden lg:block`}>
         <ul className="flex space-x-14 ">
@@ -25,7 +25,7 @@ export default function Navbar() {
           <div className="w-[25px] h-[3px] bg-white my-[5px]"></div>
           <div className="w-[25px] h-[3px] bg-white my-[5px]"></div>
       </div>
-      <div className={`after-list lg:hidden absolute top-[4.5rem] transition-transform ease-in-out duration-1000 transform right-0 p-10  ${display?' translate-x-full':''}`}>
+      <div className={`after-list lg:hidden h-[100vh] absolute bg-[#1a1a1a] top-[4.5rem] transition-transform ease-in-out duration-1000 transform right-0 p-10  ${display?' translate-x-full':''}`}>
       <ul className="flex-col space-y-16  py-11 w-[25vw] ">
           <li className="cursor-pointer"><a href="/">Home</a></li>
           <li className="cursor-pointer"><a href="/">About</a></li>
