@@ -5,8 +5,13 @@ import Navbar from './Navbar';
 function App() {
   return (
     <div className="App">
+    <header>
       <Navbar/>
-       <Landing_Page/>
+      </header>
+      <main>
+        <section><Landing_Page/></section>
+        <aside></aside>
+      </main>
     </div>
   );
 }
