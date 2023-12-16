@@ -8,7 +8,7 @@ body {
   /* background: rgb(1, 1, 31); */
   background-color: #1a1a1a; /* Dark background */
   color: white;
-  font-family: 'Poppins sans-serif '
+  font-family: 'Poppins  '
 }
 @tailwind base;
 @tailwind components;
@@ -16,4 +16,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.landing-page-upper-container{
+  display: flex;
+  @media (min-width: 600px) {
+    flex-direction: row;
+}
 }
