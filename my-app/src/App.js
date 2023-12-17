@@ -1,5 +1,6 @@
 import './App.css';
-import Landing_Page from './Landing_Page';
+import Footer from './Footer';
+import LandingPage from './LandingPage';
 import Navbar from './Navbar';
 
 function App() {
@@ -9,9 +10,11 @@ function App() {
       <Navbar/>
       </header>
       <main>
-        <section><Landing_Page/></section>
-        <aside></aside>
+        <section><LandingPage/></section>
       </main>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }

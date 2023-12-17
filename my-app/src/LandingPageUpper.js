@@ -1,10 +1,10 @@
 import React from 'react'
 import TypingAnimation from "./TypingAnimation";
 
-export default function Landing_page_upper() {
+export default function LandingPageUpper() {
   return (
-    <div>
-      <div className=" landing-page-upper-container my-7 px-2 lg:px-14 lg:my-0 py-8 flex-col space-y-14 lg:space-y-0 ">
+    <div id='Home'>
+      <div className="flex-row-edited my-7 px-2 lg:px-14 lg:my-0 py-8 flex-col space-y-14 lg:space-y-0 ">
         <div className="land-page-about text-2xl lg:text-4xl font-semibold  flex justify-center items-center ">
           <div className="inner-land-page-about-forFlex  flex-col w-[35rem]  ">
             <div className="w-[auto] lg:py-2">

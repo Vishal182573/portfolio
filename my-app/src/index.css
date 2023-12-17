@@ -17,7 +17,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.landing-page-upper-container{
+.flex-row-edited{
   display: flex;
   @media (min-width: 600px) {
     flex-direction: row;
