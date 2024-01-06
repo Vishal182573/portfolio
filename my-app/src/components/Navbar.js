@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 export default function Navbar() {
   const [display, setdisplay] = useState(1);
   const showlist = () => {
@@ -7,35 +8,51 @@ export default function Navbar() {
   const scrollDestiny = (id) => {
     const destination = document.getElementById(id);
     if (destination) {
-      console.log('Scrolling to:', destination.id);
-      destination.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      console.log("Scrolling to:", destination.id);
+      destination.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-      console.log('Destination not found.');
+      console.log("Destination not found.");
     }
   };
   return (
-    <div className=" p-3 h-[4rem] fixed w-[100vw] top-0 bg-[#1a1a1a] flex lg:justify-around justify-between items-center border-b-[0.5px] border-white rounded " style={{zIndex:100}}>
-      <div
-        className="name lg:text-2xl text-xl text-white font-bold font-[Poppins]"
-        style={{ fontFamily: "sans-serif" }}
-      >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className=" p-3 h-[4rem] fixed w-[100vw] top-0 bg-[#1a1a1a] flex lg:justify-around justify-between items-center border-b-[0.5px] border-white rounded  duration-1000 ease-in-out z-50"
+    >
+      <div className="name lg:text-2xl text-xl text-white font-bold font-[Poppins]">
         <a href="/">Vishal Sharma</a>
       </div>
       <div className={`right-part hidden lg:block`}>
         <ul className="flex space-x-14 ">
-          <li className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]" onClick={()=>scrollDestiny('Home')}>
-             Home
+          <li
+            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
+            onClick={() => scrollDestiny("Home")}
+          >
+            Home
           </li>
-          <li className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]" onClick={()=>scrollDestiny('Past-Experience')}>
+          <li
+            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
+            onClick={() => scrollDestiny("Past-Experience")}
+          >
             Past Experience
           </li>
-          <li className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]" onClick={()=>scrollDestiny('Skills-Set')}>
+          <li
+            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
+            onClick={() => scrollDestiny("Skills-Set")}
+          >
             Skills Set
           </li>
-          <li className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]" onClick={()=>scrollDestiny('Projects')}>
+          <li
+            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
+            onClick={() => scrollDestiny("Projects")}
+          >
             Projects
           </li>
-          <li className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]" onClick={()=>scrollDestiny('Contact-Me')}>
+          <li
+            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
+            onClick={() => scrollDestiny("Contact-Me")}
+          >
             Contact Me
           </li>
         </ul>
@@ -57,23 +74,38 @@ export default function Navbar() {
         }`}
       >
         <ul className="flex-col space-y-16  py-11 w-[25vw] ">
-          <li className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]" onClick={()=>scrollDestiny('Home')}>
+          <li
+            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
+            onClick={() => scrollDestiny("Home")}
+          >
             Home
           </li>
-          <li className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]" onClick={()=>scrollDestiny('Past-Experience')}>
+          <li
+            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
+            onClick={() => scrollDestiny("Past-Experience")}
+          >
             Past Experience
           </li>
-          <li className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]" onClick={()=>scrollDestiny('Skills-Set')}>
+          <li
+            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
+            onClick={() => scrollDestiny("Skills-Set")}
+          >
             Skills Set
           </li>
-          <li className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]" onClick={()=>scrollDestiny('Projects')}>
+          <li
+            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
+            onClick={() => scrollDestiny("Projects")}
+          >
             Projects
           </li>
-          <li className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]" onClick={()=>scrollDestiny('Contact-Me')}>
+          <li
+            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
+            onClick={() => scrollDestiny("Contact-Me")}
+          >
             Contact Me
           </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }

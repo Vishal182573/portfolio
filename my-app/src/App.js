@@ -24,16 +24,19 @@ function App() {
   }, []);
 
   return (
-    <div className="App w-[100%] h-full overflow-hidden " ref={scrollRef}>
+    <div className="App" style={{ fontFamily: "sans-serif" }}>
     <header>
       <Navbar/>
       </header>
+    <div
+    className="main w-[100%] h-full overflow-hidden" ref={scrollRef} >
       <main>
         <section><LandingPage/></section>
       </main>
       <footer>
         <Footer/>
       </footer>
+    </div>
     </div>
   );
 }

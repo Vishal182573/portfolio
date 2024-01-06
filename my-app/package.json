@@ -9,6 +9,7 @@
     "axios": "^1.6.2",
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
+    "framer-motion": "^10.17.9",
     "locomotive-scroll": "^4.1.4",
     "mongoose": "^8.0.3",
     "react": "^18.2.0",
