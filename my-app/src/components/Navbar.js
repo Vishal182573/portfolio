@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 export default function Navbar() {
   const [display, setdisplay] = useState(1);
-  {/*for reponsive navbar*/}
   const showlist = () => {
     setdisplay(!display);
   };
-  {/*to refer to a given element*/}
   const scrollDestiny = (id) => {
     const destination = document.getElementById(id);
     if (destination) {
@@ -21,7 +19,7 @@ export default function Navbar() {
         className="name lg:text-2xl text-xl text-white font-bold font-[Poppins]"
         style={{ fontFamily: "sans-serif" }}
       >
-        <a href="#">Vishal Sharma</a>
+        <a href="/">Vishal Sharma</a>
       </div>
       <div className={`right-part hidden lg:block`}>
         <ul className="flex space-x-14 ">

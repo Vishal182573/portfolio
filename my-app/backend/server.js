@@ -18,7 +18,7 @@ const Contact = mongoose.model('Contact', {
 app.use(bodyParser.json());
 
 // Handle form submissions
-app.post('/api/contact', async (req, res) => {
+app.post('/', async (req, res) => {
   try {
     const { name, email, message } = req.body;
     const contact = new Contact({ name, email, message });

@@ -10,7 +10,7 @@ export default function LandingPageProjectsPage() {
       <div className="projects-container-cards flex-col  flex-row-edited p-4 my-4 lg:space-x-[10vw]">
         <div className="projects-container-card px-2 py-2 bg-[#9b59b6] mt-8 text-[#ffd700] border-2 rounded-xl flex-col ">
           <div className="card-img mb-3 flex justify-center">
-            <a href="#">
+            <a href="/">
               <img src="scenary.png" alt="" className=" h-[20vh]" />
             </a>
           </div>
@@ -21,7 +21,7 @@ export default function LandingPageProjectsPage() {
         </div>
         <div className="projects-container-card px-2 py-2 bg-[#9b59b6] mt-8 text-[#ffd700] border-2 rounded-xl flex-col ">
           <div className="card-img mb-3 flex justify-center">
-            <a href="#">
+            <a href="/">
               <img src="scenary.png" alt="" className=" h-[20vh]" />
             </a>
           </div>
@@ -32,7 +32,7 @@ export default function LandingPageProjectsPage() {
         </div>
         <div className="projects-container-card px-2 py-2 bg-[#9b59b6] mt-8 text-[#ffd700] border-2 rounded-xl flex-col ">
           <div className="card-img mb-3 flex justify-center">
-            <a href="#">
+            <a href="/">
               <img src="scenary.png" alt="" className=" h-[20vh]" />
             </a>
           </div>
