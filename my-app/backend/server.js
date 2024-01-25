@@ -1,35 +1,23 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+// const express = require('express');
+// const app = express();
+// const contact = require('./database'); // Adjust path if model file is elsewhere
 
-const app = express();
-const PORT = process.env.PORT || 5000;
+// // ... other app setup (routes, middleware, etc.)
 
-// Connect to MongoDB (replace 'your_mongo_uri' with your actual MongoDB connection string)
-mongoose.connect('mongodb+srv://sharmavs9205:<password>@cluster1.qzp8odb.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true });
+// app.post('/', async (req, res) => {
+//   try {
+//     const newContact = new contact({
+//       Username: req.body.name,
+//       Email: req.body.email,
+//       Message: req.body.message
+//     });
 
-// Create a mongoose model for the contact form submissions
-const Contact = mongoose.model('Contact', {
-  name: String,
-  email: String,
-  message: String,
-});
+//     const savedContact = await newContact.save();
+//     res.json({ message: 'Message sent successfully!', data: savedContact });
+//   } catch (error) {
+//     console.error('Error saving contact:', error);
+//     res.status(500).json({ message: 'Failed to send message. Please try again.' });
+//   }
+// });
 
-app.use(bodyParser.json());
-
-// Handle form submissions
-app.post('/', async (req, res) => {
-  try {
-    const { name, email, message } = req.body;
-    const contact = new Contact({ name, email, message });
-    await contact.save();
-    res.status(200).json({ message: 'Message sent successfully!' });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Internal Server Error' });
-  }
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// // ... other app code

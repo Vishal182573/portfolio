@@ -18,7 +18,7 @@ export default function Navbar() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className=" p-3 h-[4rem] fixed w-[100vw] top-0 bg-[#1a1a1a] flex lg:justify-around justify-between items-center border-b-[0.5px] border-white rounded  duration-1000 ease-in-out z-50"
+      className=" p-3 h-[4rem] w-[100vw] fixed top-0 bg-[#1a1a1a] flex lg:justify-around justify-between items-center border-b-[0.5px] border-white rounded  duration-1000 ease-in-out z-50"
     >
       <div className="name lg:text-2xl text-xl text-white font-bold font-[Poppins]">
         <a href="/">Vishal Sharma</a>

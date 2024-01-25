@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-
 function ContactMe() {
+  // const contact = require('../../backend/server');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,13 +13,17 @@ function ContactMe() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await axios.post('http://localhost:5000/api/contact', formData);
-      alert('Message sent successfully!');
-    } catch (error) {
-      console.error('Error sending message:', error);
-      alert('Failed to send message. Please try again.');
-    }
+    // try {
+    //   await contact.create({
+    //     Username:formData.name,
+    //     Email:formData.email,
+    //     Message:formData.message
+    //   })
+    //   alert('Message sent successfully!');
+    // } catch (error) {
+    //   console.error('Error sending message:', error);
+    //   alert('Failed to send message. Please try again.');
+    // }
   };
 
   return (

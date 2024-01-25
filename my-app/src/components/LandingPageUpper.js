@@ -52,12 +52,11 @@ export default function LandingPageUpper() {
         </div>
         <div className="land-page-image lg:block overflow-hidden">
           <motion.div
-           initial={{scale:0.1,rotateZ:180}}
+           initial={{scale:0.5}}
             animate={{
               x: 0,
               y: 0,
               scale: 1,
-              rotateZ: 0,
             }}
             className="translate-y-[-100%] duration-700 ease-in-out"
           >
