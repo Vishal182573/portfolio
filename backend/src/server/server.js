@@ -11,7 +11,7 @@ const port=process.env.PORT || 3000;
 app.use(json());
 
 app.use(cors({
-    origin: 'https://portfolio-plum-two-58.vercel.app/', // Allow requests from this origin
+    origin: 'https://portfolio-plum-two-58.vercel.app', // Allow requests from this origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
 }));
