@@ -15,8 +15,8 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
 }));
-
 app.use("/api",contactRoutes);
+app.use('/',(req,res)=>{res.send("Hello")});
 
 app.listen(port,()=>{
     console.log("server is listening");
