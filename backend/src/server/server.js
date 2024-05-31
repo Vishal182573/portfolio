@@ -1,6 +1,6 @@
 import express,{json} from "express"
 import cors from "cors"
-import connectDb from "./config/dbconnection.js";
+import connectDb from "./config/dbConnection.js";
 import contactRoutes from "./routes/contactRoutes.js"
 
 
@@ -15,6 +15,7 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allow these headers
 }));
+
 app.use("/api",contactRoutes);
 
 app.listen(port,()=>{
