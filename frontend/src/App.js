@@ -5,11 +5,11 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <>
+    <div className="bg-gradient-to-br from-gray-900 to-black">
       <header className="sticky top-0 p-3 w-full font-bold z-50">
         <Navbar />
       </header>
-      <main className="main w-full overflow-hidden">
+      <main className="main w-full overflow-hidden ">
         <section>
           <LandingPage />
         </section>
@@ -17,7 +17,7 @@ function App() {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 

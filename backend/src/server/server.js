@@ -19,5 +19,5 @@ app.use("/api",contactRoutes);
 app.use('/',(req,res)=>{res.send("Hello")});
 
 app.listen(port,()=>{
-    console.log("server is listening");
+    console.log(`server is listening on port ${port}`);
 })

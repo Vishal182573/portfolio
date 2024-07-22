@@ -3,6 +3,7 @@ import asyncHandler from "express-async-handler"
 
 const contactController = asyncHandler(async (req, res) => {
     const { name, email, message} = req.body;
+    console.log("Called");
     if (!name || !email || !message) {
         return res
           .status(400)

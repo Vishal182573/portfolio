@@ -1,111 +1,111 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 export default function Navbar() {
-  const [display, setdisplay] = useState(1);
-  const showlist = () => {
-    setdisplay(!display);
-  };
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollDestiny = (id) => {
     const destination = document.getElementById(id);
     if (destination) {
-      console.log("Scrolling to:", destination.id);
       destination.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      console.log("Destination not found.");
     }
   };
+
+  const navItems = [
+    { name: "Home", id: "Home" },
+    { name: "Past Journey", id: "Past-Experience" },
+    { name: "Skills Set", id: "Skills-Set" },
+    { name: "Projects", id: "Projects" },
+    { name: "Contact Me", id: "Contact-Me" },
+  ];
+
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className=" p-3 w-full bg-[#1a1a1a] flex lg:justify-around justify-between items-center border-[1px] rounded-lg border-white duration-1000 ease-in-out"
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 left-0 right-0 z-50 p-4 transition-all duration-300 ${
+        (scrolled || isOpen) ? "bg-black bg-opacity-80 backdrop-blur-md" : "bg-transparent"
+      }`}
     >
-      <div className="name lg:text-2xl text-xl text-white font-bold font-[Poppins]">
-        <a href="/">Portfolio</a>
+      <div className="container mx-auto flex justify-between items-center">
+        <motion.a
+          href="/"
+          className="text-2xl font-bold text-white"
+          whileHover={{ scale: 1.05 }}
+        >
+          Portfolio
+        </motion.a>
+
+        <div className="hidden md:flex space-x-6">
+          {navItems.map((item) => (
+            <motion.button
+              key={item.id}
+              onClick={() => scrollDestiny(item.id)}
+              className="text-white hover:text-[#aaaaf4] transition-colors"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {item.name}
+            </motion.button>
+          ))}
+        </div>
+
+        <motion.button
+          className="md:hidden text-white"
+          onClick={() => setIsOpen(!isOpen)}
+          whileTap={{ scale: 0.95 }}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </motion.button>
       </div>
-      <div className={`right-part hidden lg:block`}>
-        <ul className="flex space-x-14 ">
-          <li
-            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
-            onClick={() => scrollDestiny("Home")}
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden mt-4"
           >
-            Home
-          </li>
-          <li
-            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
-            onClick={() => scrollDestiny("Past-Experience")}
-          >
-            Past Journey
-          </li>
-          <li
-            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
-            onClick={() => scrollDestiny("Skills-Set")}
-          >
-            Skills Set
-          </li>
-          <li
-            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
-            onClick={() => scrollDestiny("Projects")}
-          >
-            Projects
-          </li>
-          <li
-            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
-            onClick={() => scrollDestiny("Contact-Me")}
-          >
-            Contact Me
-          </li>
-        </ul>
-      </div>
-      <div
-        className={`open-lists cursor-pointer lg:hidden p-1 ${
-          display ? "" : "border-2 border-white rounded"
-        }`}
-        onClick={showlist}
-      >
-        <div className="w-[25px] h-[3px] bg-white my-[5px]"></div>
-        <div className="w-[25px] h-[3px] bg-white my-[5px]"></div>
-        <div className="w-[25px] h-[3px] bg-white my-[5px]"></div>
-      </div>
-      {/*position:absolute gives total estimate without consideration of overflow so use of fixed in side scrolling animation*/}
-      <div
-        className={`after-list lg:hidden h-[100vh] fixed bg-[#1a1a1a] top-[4rem] transition-transform ease-in-out duration-1000 transform right-0 p-10 font-[Poppins] ${
-          display ? " translate-x-full" : ""
-        }`}
-      >
-        <ul className="flex-col space-y-16  py-11 w-[25vw] ">
-          <li
-            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
-            onClick={() => scrollDestiny("Home")}
-          >
-            Home
-          </li>
-          <li
-            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
-            onClick={() => scrollDestiny("Past-Experience")}
-          >
-            Past Experience
-          </li>
-          <li
-            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
-            onClick={() => scrollDestiny("Skills-Set")}
-          >
-            Skills Set
-          </li>
-          <li
-            className="cursor-pointer select-none hover:text-[#aaaaf4] hover:text-[1.05rem]"
-            onClick={() => scrollDestiny("Projects")}
-          >
-            Projects
-          </li>
-          <li
-            className="cursor-pointer select-none hover:text-[rgb(170,170,244)] hover:text-[1.05rem]"
-            onClick={() => scrollDestiny("Contact-Me")}
-          >
-            Contact Me
-          </li>
-        </ul>
-      </div>
-    </motion.section>
+            {navItems.map((item) => (
+              <motion.button
+                key={item.id}
+                onClick={() => {
+                  scrollDestiny(item.id);
+                  setIsOpen(false);
+                }}
+                className="block w-full text-left py-2 px-4 text-white hover:bg-white hover:bg-opacity-10 transition-colors"
+                whileHover={{ x: 10 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {item.name}
+              </motion.button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 }
