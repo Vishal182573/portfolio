@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const skills = {
-  "Languages": ["JavaScript", "TypeScript", "C++", "Python"],
+  "Programming Languages": ["JavaScript", "TypeScript", "C++", "Python"],
   "Web Development": ["HTML", "CSS", "Node.js", "Express.js", "React.js", "Next.js", "shadcn/ui", "Web Sockets","Prisma"],
   "Databases": ["MongoDB", "MySQL","PostgreSQL"],
   "Machine Learning": ["NumPy", "Pandas", "Scikit-Learn", "TensorFlow", "Keras", "PyTorch", "Matplotlib", "Seaborn"]
@@ -48,9 +48,9 @@ const SkillCard = () => {
       <h2 className="text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
         My Skills
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {Object.keys(skills).map((category) => (
-          <motion.div key={category} variants={itemVariants} className="bg-gray-800 rounded-lg p-6 shadow-lg">
+          <motion.div key={category} variants={itemVariants} className="bg-gray-800 rounded-lg p-6 shadow-lg min-h-48">
             <h3 className="text-xl font-bold mb-4 text-center text-blue-400">{category}</h3>
             <div className="flex flex-wrap justify-center gap-2">
               {skills[category].map((skill) => (

@@ -2,10 +2,12 @@ import "./App.css";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
+import ParticlesComponent from "./components/particles";
 
 function App() {
   return (
-    <div className="bg-gradient-to-br from-gray-900 to-black">
+    <div className="">
+      <ParticlesComponent id="particles"/>
       <header className="sticky top-0 p-3 w-full font-bold z-50">
         <Navbar />
       </header>

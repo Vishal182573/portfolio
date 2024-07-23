@@ -34,7 +34,7 @@ const ContactMe = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 "
+      className="min-h-screen flex items-center justify-center px-8 my-12 lg:my-0"
       id="Contact-Me"
     >
       <div className="max-w-lg w-full space-y-8 bg-white p-8 sm:p-10 rounded-2xl shadow-2xl">
