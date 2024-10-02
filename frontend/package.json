@@ -10,6 +10,7 @@
     "@tsparticles/react": "^3.0.0",
     "axios": "^1.6.8",
     "framer-motion": "^10.17.9",
+    "lucide-react": "^0.447.0",
     "path-browserify": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

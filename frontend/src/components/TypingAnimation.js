@@ -7,7 +7,7 @@ function TypingAnimation() {
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Web Developer', 'Competitive Programmer', 'Machine Learning Developer'],
+      strings: ['Web Developer', 'Web3 Developer','Competitive Programmer', 'Machine Learning Developer'],
       typeSpeed: 70,
       loop: true, // Set loop option to true for continuous animation
     });

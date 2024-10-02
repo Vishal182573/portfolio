@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope} from 'react-icons/fa';
 import { SiLeetcode, SiGeeksforgeeks } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
@@ -58,9 +58,6 @@ export default function Footer() {
             <h3 className="font-semibold mb-2">Contact Information</h3>
             <p className="flex items-center justify-center lg:justify-start mb-1">
               <FaEnvelope className="mr-2" /> sharmavs9205@gmail.com
-            </p>
-            <p className="flex items-center justify-center lg:justify-start">
-              <FaPhoneAlt className="mr-2" /> +91 7303876390
             </p>
           </div>
           <div className="text-center lg:text-right">

@@ -6,7 +6,7 @@ import contactRoutes from "./routes/contactRoutes.js"
 
 connectDb();
 const app = express();
-const port=process.env.PORT || 3000;
+const port=process.env.PORT || 3001;
 
 app.use(json());
 
@@ -17,6 +17,10 @@ app.use(cors({
 }));
 app.use("/api",contactRoutes);
 app.use('/',(req,res)=>{res.send("Hello")});
+
+setInterval(()=>{
+console.log("a");
+},50000);
 
 app.listen(port,()=>{
     console.log(`server is listening on port ${port}`);
