@@ -26,10 +26,10 @@ const projects = [
     technologies: ["Electron.js", "Shadcn/UI", "MAVSDK", "SITL", "gRPC", "Node.js", "TypeScript"]
   },  
   {
-    name: "Probe Stem (In Progress)",
+    name: "Probe Stem",
     description: "A scientific research platform aimed at connecting researchers and encouraging collaboration on STEM-based projects. It allows users to showcase their work, connect with peers, and explore groundbreaking research.",
     imgSrc: "probe_stemm.png",
-    link: "https://probe-stemm.vercel.app/",
+    link: "https://probestem.com",
     technologies: ["React", "Node.js", "MongoDB", "Cloudinary"]
   },
   {
@@ -37,7 +37,7 @@ const projects = [
     description:
       "A full-fledged platform for booking cabs, managing drivers, and tracking rides in real-time. Built using WebSockets for real-time communication, Avati enables smooth coordination between passengers and drivers, including payment integration, ride history, and geo-location tracking.",
     imgSrc: "avati.png",
-    link: "https://github.com/Vishal182573/AVATII-new",
+    link: "https://play.google.com/store/apps/details?id=com.avatii.avatiiapp&hl=en",
     technologies: ["Flutter", "Node.js", "Socket.io","Google Maps Api"]
   },
   {
