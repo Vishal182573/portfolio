@@ -85,8 +85,8 @@ export default function Skills() {
         {
             id: 2,
             company: "Coinster Fintech Pvt. Ltd.",
-            role: "Software Engineering Intern",
-            period: "Jan 2025 - June 2025",
+            role: "Software Engineer",
+            period: "Jan 2025 - Present",
             description:
                 "Built AI dispute resolution system with real-time chat interface using Python for escrow payment processing. Achieved 92% accuracy in automated fault detection through machine learning algorithms. Implemented CI/CD pipeline for automated testing and deployment ensuring code quality and reliability.",
             logo: "/assets/coinster.svg",
